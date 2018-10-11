@@ -1,24 +1,23 @@
 #include<stdio.h>
-long fib(long n)
+void fab(int);
+int main()
 {
-    long a = 0, b = 1, c;
-    int i;
-    if( n == 0)
-        return a;
-    for (i = 2; i <= n; i++)
-    {
-        c = a + b;
-        a = b;
-        b = c;
-    }
-    return b;
-}
-
-int main ()
-{
-    long n;
-    printf(" Input Number : ");
-    scanf("%ld",&n);
-    printf("\n Result :  %ld\n\n", fib(n));
-    return 0;
-}
+int n;
+ printf("enter the number of terms of a fabonacci series:   ");
+ scanf("%d",&n);
+ fab(n);
+ return 0;
+ }
+ void fab(int a)
+ {
+  int b=0,c=1,d,i;
+  printf("%d  ",b);
+  for(i=1;i<a;i++)
+  {
+   d=b+c;
+   c=b;
+   b=d;
+   printf("%d   ",d);
+  }
+  printf("\n");
+  }
